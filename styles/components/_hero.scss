@@ -1,0 +1,104 @@
+@import '../common/vars';
+
+.hero {
+
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, #F2F9FF 0%, rgba(242, 249, 255, 0.01) 100%);
+        z-index: -1;
+    }
+
+    &__header {
+        padding: 50px 0;
+        margin-bottom: 130px;
+
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-list-item {
+            padding: 20px;
+        }
+
+        &-list-link {
+            &:hover {
+                color: $secondary-color;
+                text-shadow: 1px 1px 1px currentColor;
+            }
+        }
+
+        &-btn {
+            box-shadow: 0px 5px 5px rgba(75, 93, 104, .1);
+
+            &:hover {
+                box-shadow: none;
+                background-color: rgba(75, 93, 104, .1);
+            }
+            &-arrow {
+                color: $purple-color;
+            }
+        }
+    }
+    
+    &__body {
+
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &-info {
+            width: 30%;
+        }
+
+        &-col {
+            width: 70%;
+        }
+
+        &-caption {
+            width: 645px;
+            margin-bottom: 50px;
+            font-weight: 700;
+            font-family: $secondary-ff;
+            color: $secondary-color;
+            font-size: 80px;
+            line-height: 88px;
+        }
+
+        &-text {
+            margin-bottom: 50px;
+            max-width: 380px;
+        }
+
+        &-btn {
+            background-color: $purple-color;
+            color: $white-color;
+            border: 1px solid $purple-color;
+            margin-bottom: 100px;
+
+            &:hover {
+                background-color: transparent;
+                color: $purple-color;
+            }
+        }
+        
+        &-img{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import './vars';
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../../fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("../../fonts/OpenSans-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../../fonts/OpenSans-Medium.woff2") format("woff2"),
+        url("../../fonts/OpenSans-Medium.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../../fonts/OpenSans-Bold.woff2") format("woff2"),
+        url("../../fonts/OpenSans-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/Roboto-Regular.woff2") format("woff2"),
+        url("../../fonts/Roboto-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/Roboto-Bold.woff2") format("woff2"),
+        url("../../fonts/Roboto-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: $main-ff;
+    font-size: $main-fz;
+    line-height: $main-lh;
+    font-weight: $main-fw;
+    color: $main-color;
+    margin: 0;
+    min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+}
+
+ul, ol, nav {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+    transition: $trs;
+}
+
+.container {
+    max-width: 1165px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.caption {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .02em;
+}

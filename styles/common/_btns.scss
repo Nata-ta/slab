@@ -1,0 +1,22 @@
+@import './vars';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: $main-ff;
+    font-size: $main-fz;
+    line-height: $main-lh;
+    font-weight: 700;
+    padding: 17px 23px;
+    cursor: pointer;
+    background-color: $white-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 50px;
+    transition: $trs;
+
+    svg {
+        width: 24px;
+        margin-left: 8px;
+    }
+}

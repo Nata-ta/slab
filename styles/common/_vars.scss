@@ -1,0 +1,42 @@
+$main-fz: 18px;
+$main-fw: 500;
+$main-lh: 1.6;
+$main-ff: 'Open Sans', Arial, Helvetica, sans-serif;
+$secondary-ff: 'Roboto', Arial, Helvetica, sans-serif;
+
+$main-color: #4B5D68;
+$secondary-color: #212353;
+$white-color:#FFFFFF;
+$purple-color: #9C69E2;
+
+$trs: all .3s;
+
+$mobile-low: 479px;
+$mobile-width: 767px;
+$tablet-width: 1024px;
+$desktop-width: 1366px;
+
+@mixin b($breakpoints) {
+  @if ($breakpoints == desktop) {
+    @media (max-width: #{$desktop-width}) {
+      @content
+      }
+    }
+  @if ($breakpoints == tablet) {
+    @media (max-width: #{$tablet-width}) {
+      @content
+    }
+  } @else if ($breakpoints == mobile) {
+    @media (max-width: #{$mobile-width}) {
+      @content
+    }
+  } @else if ($breakpoints == mobile-sm) {
+    @media (max-width: #{$mobile-low}) {
+      @content
+    }
+  } @else {
+    @media (max-width: $breakpoints + px) {
+      @content
+      }
+    }
+}
