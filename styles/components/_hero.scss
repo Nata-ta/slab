@@ -1,7 +1,7 @@
 @import '../common/vars';
 
 .hero {
-
+    padding: 50px 0;
     position: relative;
     
     &::before {
@@ -16,8 +16,8 @@
     }
 
     &__header {
-        padding: 50px 0;
-        margin-bottom: 130px;
+
+        margin-bottom: 50px;
 
         &-wrap {
             display: flex;
