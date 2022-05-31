@@ -1,0 +1,44 @@
+@import '../common/vars';
+
+.signup {
+    padding: 75px 0;
+
+    &__body {
+        border-top: 2px solid $purple-opacity;
+        padding-top: 100px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        color: $secondary-color;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+    }
+
+    &__btns-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btn {
+        margin-right: 30px;
+        background-color: $dots-colorr;
+        border: 1px solid $dots-colorr;
+
+        &:hover {
+            background-color: transparent;
+            color: $dots-colorr;
+        }
+    }
+}
