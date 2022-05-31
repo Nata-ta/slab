@@ -1,30 +1,30 @@
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Medium.woff2") format("woff2"), url("../../fonts/OpenSans-Medium.woff") format("woff");
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
@@ -96,6 +96,7 @@ a {
 }
 
 .hero {
+  padding: 50px 0;
   position: relative;
 }
 .hero::before {
@@ -109,8 +110,7 @@ a {
   z-index: -1;
 }
 .hero__header {
-  padding: 50px 0;
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 }
 .hero__header-wrap {
   display: flex;
@@ -177,7 +177,7 @@ a {
 }
 
 .about {
-  padding: 50px 0;
+  padding: 50px 0 75px;
 }
 .about__wrap {
   display: flex;
@@ -204,7 +204,7 @@ a {
 }
 
 .features {
-  padding: 100px 0;
+  padding: 75px 0;
 }
 .features__caption {
   text-align: center;
@@ -280,10 +280,48 @@ a {
   color: #9C69E2;
 }
 
+.testimonials {
+  padding: 75px 0;
+}
 .testimonials__body {
-  padding: 100px 93px 130px;
+  padding: 100px 0 130px 93px;
   background-color: #9C69E2;
   border-radius: 50px;
+}
+.testimonials__body-wrap .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 105%;
+  font-size: 0;
+  width: 48px;
+  height: 25px;
+}
+.testimonials__body-wrap .slick-arrow.slick-prev {
+  left: 80%;
+  background: url(../images/testimonials/prev.svg) 0 0 no-repeat;
+}
+.testimonials__body-wrap .slick-arrow.slick-prev::before {
+  font-size: 0;
+}
+.testimonials__body-wrap .slick-arrow.slick-next {
+  right: 93px;
+  background: url(../images/testimonials/next.svg) 0 0 no-repeat;
+}
+.testimonials__body-wrap .slick-arrow.slick-next::before {
+  font-size: 0;
+}
+.testimonials__body-wrap .slick-dots {
+  z-index: auto;
+  text-align: left;
+}
+.testimonials__body-wrap .slick-dots li button:before {
+  color: #FFFFFF;
+  opacity: 1;
+  text-shadow: 2px 4px 3px #2123532b;
+}
+.testimonials__body-wrap .slick-dots li.slick-active button:before {
+  color: #F063B8;
+  font-size: 12px;
 }
 .testimonials__caption {
   color: #FFFFFF;
@@ -295,8 +333,12 @@ a {
   margin: 20px 20px 20px 0;
   padding: 60px 70px;
   background-color: #FFFFFF;
-  box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+  box-shadow: 0px 20px 0px #2123532b;
   border-radius: 20px;
+  border: 1px solid #9C69E2;
+}
+.testimonials__card.slick-active {
+  box-shadow: 0px 20px 0px #21235369;
 }
 .testimonials__card-wrap {
   display: flex;
@@ -319,10 +361,6 @@ a {
   letter-spacing: 0.01em;
   color: #9C69E2;
   margin-bottom: 19px;
-}
-
-.slick-dots {
-  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */
