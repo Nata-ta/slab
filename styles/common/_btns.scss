@@ -19,4 +19,27 @@
         width: 24px;
         margin-left: 8px;
     }
+
+    &--colorful {
+        background-color: $purple-color;
+        color: $white-color;
+        border: 1px solid $purple-color;
+
+        &:hover {
+            background-color: transparent;
+            color: $purple-color;
+        }
+    }
+
+    &--ghost {
+        box-shadow: 0px 5px 5px rgba(75, 93, 104, .1);
+
+        &:hover {
+            box-shadow: none;
+            background-color: rgba(75, 93, 104, .1);
+        }
+        & svg {
+            color: $purple-color;
+        }
+    }
 }

@@ -94,9 +94,28 @@ a {
   width: 24px;
   margin-left: 8px;
 }
+.btn--colorful {
+  background-color: #9C69E2;
+  color: #FFFFFF;
+  border: 1px solid #9C69E2;
+}
+.btn--colorful:hover {
+  background-color: transparent;
+  color: #9C69E2;
+}
+.btn--ghost {
+  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+}
+.btn--ghost:hover {
+  box-shadow: none;
+  background-color: rgba(75, 93, 104, 0.1);
+}
+.btn--ghost svg {
+  color: #9C69E2;
+}
 
 .hero {
-  padding: 50px 0;
+  padding: 50px 0 100px;
   position: relative;
 }
 .hero::before {
@@ -128,29 +147,14 @@ a {
   color: #212353;
   text-shadow: 1px 1px 1px currentColor;
 }
-.hero__header-btn {
-  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
-}
-.hero__header-btn:hover {
-  box-shadow: none;
-  background-color: rgba(75, 93, 104, 0.1);
-}
-.hero__header-btn-arrow {
-  color: #9C69E2;
-}
 .hero__body-wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 .hero__body-info {
-  width: 30%;
-}
-.hero__body-col {
-  width: 70%;
+  width: 50%;
 }
 .hero__body-caption {
-  width: 645px;
+  max-width: 645px;
   margin-bottom: 50px;
   font-weight: 700;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -162,22 +166,19 @@ a {
   margin-bottom: 50px;
   max-width: 380px;
 }
-.hero__body-btn {
-  background-color: #9C69E2;
-  color: #FFFFFF;
-  border: 1px solid #9C69E2;
-  margin-bottom: 100px;
-}
-.hero__body-btn:hover {
-  background-color: transparent;
-  color: #9C69E2;
-}
-.hero__body-img {
+.hero__img {
   width: 100%;
+}
+.hero__img-box {
+  position: absolute;
+  left: 40%;
+  bottom: -30px;
+  max-width: 885px;
+  z-index: -1;
 }
 
 .about {
-  padding: 50px 0 75px;
+  padding: 100px 0 75px;
 }
 .about__wrap {
   display: flex;
@@ -291,7 +292,7 @@ a {
 .testimonials__body-wrap .slick-arrow {
   position: absolute;
   z-index: 10;
-  top: 105%;
+  top: 115%;
   font-size: 0;
   width: 48px;
   height: 25px;
@@ -313,6 +314,7 @@ a {
 .testimonials__body-wrap .slick-dots {
   z-index: auto;
   text-align: left;
+  bottom: -60px;
 }
 .testimonials__body-wrap .slick-dots li button:before {
   color: #FFFFFF;
@@ -361,6 +363,42 @@ a {
   letter-spacing: 0.01em;
   color: #9C69E2;
   margin-bottom: 19px;
+}
+
+.signup {
+  padding: 75px 0;
+}
+.signup__body {
+  border-top: 2px solid rgba(156, 105, 226, 0.2);
+  padding-top: 100px;
+}
+.signup__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signup__title {
+  font-weight: 700;
+  font-size: 40px;
+  color: #212353;
+  margin-bottom: 20px;
+}
+.signup__text {
+  margin-bottom: 20px;
+}
+.signup__btns-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signup__btn {
+  margin-right: 30px;
+  background-color: #F063B8;
+  border: 1px solid #F063B8;
+}
+.signup__btn:hover {
+  background-color: transparent;
+  color: #F063B8;
 }
 
 /*# sourceMappingURL=style.css.map */
