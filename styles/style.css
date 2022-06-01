@@ -401,4 +401,119 @@ a {
   color: #F063B8;
 }
 
+.footer {
+  padding: 75px 0 91px;
+}
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 88px;
+}
+.footer__info {
+  width: 50%;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.footer__logo-box {
+  margin-right: 20px;
+}
+.footer__caption {
+  font-weight: 700;
+  font-size: 20px;
+  color: #212353;
+}
+.footer__adress {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: #212353;
+  margin-bottom: 10px;
+  max-width: 335px;
+}
+.footer__link {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  color: #212353;
+  letter-spacing: 0.01em;
+}
+.footer__link:hover {
+  color: #F063B8;
+  text-shadow: 1px 2px 1px #2123532b;
+}
+.footer__body {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__col {
+  width: 30%;
+}
+.footer__title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #212353;
+  margin-bottom: 30px;
+}
+.footer__item {
+  padding: 10px 0;
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #212353;
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: all 0.3s;
+}
+.footer__social-box:hover {
+  background-color: #F063B8;
+  opacity: 1;
+}
+.footer__social svg {
+  color: #FFFFFF;
+}
+.footer__outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__text {
+  max-width: 360px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: #212353;
+}
+.footer__message-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(156, 105, 226, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.footer__message-box:hover {
+  box-shadow: 4px 6px 4px rgba(156, 105, 226, 0.2);
+}
+
 /*# sourceMappingURL=style.css.map */
