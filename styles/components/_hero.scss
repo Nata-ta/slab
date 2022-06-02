@@ -1,8 +1,12 @@
 @import '../common/vars';
 
 .hero {
-    padding: 50px 0 100px;
+    min-height: 100vh;
+    padding: 50px 0;
     position: relative;
+    @include b(tablet) {
+        padding: 30px 0;
+    }
     
     &::before {
         content: '';
@@ -13,6 +17,37 @@
         bottom: 0;
         background: linear-gradient(180deg, #F2F9FF 0%, rgba(242, 249, 255, 0.01) 100%);
         z-index: -1;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        transition: $trs;
+        position: relative;
+        @include b(tablet) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(105deg, rgba(122, 122, 122, .1) 2%, rgba(122, 122, 122, 0) 105%);
+            filter: drop-shadow(0 4px 4px rgba(50, 50, 50, .15));
+            backdrop-filter: blur(100px);
+            width: 320px;
+            padding: 134px 0;
+            display: none;
+        }
+        @include b(mobile) {
+            width: 100%;
+        }
+
+        &--open {
+            @include b(tablet) {
+                display: block;
+                z-index: 1;
+            }
+        }
     }
 
     &__header {
@@ -27,7 +62,12 @@
 
         &-menu {
             display: flex;
-            justify-content: space-between;
+            @include b(tablet) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+            }
         }
 
         &-list-item {
@@ -40,16 +80,72 @@
                 text-shadow: 1px 1px 1px currentColor;
             }
         }
+
+        &-btn {
+
+            @include b(tablet) {
+                text-align: center;
+            }
+
+            &-menu {
+                width: 24px;
+                height: 21px;
+                position: relative;
+                display: none;
+                @include b(tablet) {
+                    display: block;
+                }
+
+                &--open {
+                    position: absolute;
+                    right: 20px;
+                    z-index: 1;
+        
+                    .hero__header-btn-line:nth-child(1) {
+                        transform: rotate(45deg);
+                        top: 9px;
+                        background-color: $dots-colorr;
+                    }
+        
+                    .hero__header-btn-line:nth-child(2) {
+                        display: none;
+                    }
+        
+                    .hero__header-btn-line:nth-child(3) {
+                        transform: rotate(-45deg);
+                        top: 9px;
+                        background-color: $dots-colorr;
+                    }
+                }
+            }
+
+            &-line {
+                position: absolute;
+                width: 24px;
+                height: 2px;
+                background-color: $dots-colorr;
+                left: 0;
+                transition: $trs;
+        
+                &:nth-child(1) {
+                    top: 0;
+                }
+        
+                &:nth-child(2) {
+                    top: 9px;
+                }
+        
+                &:nth-child(3) {
+                    top: 18px;
+                }
+            }
+        }
     }
     
     &__body {
 
         &-wrap {
             display: flex;
-        }
-
-        &-info {
-            width: 50%;
         }
 
         &-caption {
@@ -60,11 +156,27 @@
             color: $secondary-color;
             font-size: 80px;
             line-height: 88px;
+            @include b(mobile) {
+                text-align: center;
+                margin: 0 auto 20px;
+                font-size: 54px;
+            }
+    
         }
 
         &-text {
             margin-bottom: 50px;
             max-width: 380px;
+            @include b(mobile) {
+                text-align: center;
+                margin: 0 auto 30px;
+            }
+        }
+
+        &-btn {
+            @include b(mobile) {
+                text-align: center;
+            }
         }
     }
 
@@ -74,9 +186,12 @@
         &-box {
             position: absolute;
             left: 40%;
-            bottom: -30px;
+            bottom: 100px;
             max-width: 885px;
             z-index: -1;
+            @include b(mobile) {
+                display: none;
+            }
         }
     }
 
