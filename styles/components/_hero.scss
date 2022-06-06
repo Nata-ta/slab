@@ -35,7 +35,7 @@
             filter: drop-shadow(0 4px 4px rgba(50, 50, 50, .15));
             backdrop-filter: blur(100px);
             width: 320px;
-            padding: 134px 0;
+            padding: 134px 40px;
             display: none;
         }
         @include b(mobile) {
@@ -51,8 +51,6 @@
     }
 
     &__header {
-
-        margin-bottom: 50px;
 
         &-wrap {
             display: flex;
@@ -145,7 +143,9 @@
     &__body {
 
         &-wrap {
+            min-height: calc(100vh - 42px);
             display: flex;
+            align-items: center;
         }
 
         &-caption {

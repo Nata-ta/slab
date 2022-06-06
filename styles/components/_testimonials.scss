@@ -13,6 +13,9 @@
         @include b(tablet) {
             padding: 30px 0 30px 40px;
         }
+        @include b(tablet) {
+            padding: 50px 40px 70px;
+        }
 
         &-wrap {
 
@@ -26,10 +29,16 @@
                 @include b(tablet) {
                     top: 107%;
                 }
+                @include b(mobile) {
+                    top: 112%;
+                }
 
                 &.slick-prev {
                     left: 80%;
                     background: url(../images/testimonials/prev.svg) 0 0 no-repeat;
+                    @include b(mobile) {
+                        left: 0;
+                    }
 
                     &::before {
                         font-size: 0;
@@ -39,6 +48,13 @@
                 &.slick-next {
                     left: 89%;
                     background: url(../images/testimonials/next.svg) 0 0 no-repeat;
+                    @include b(mobile) {
+                        left: 92%;
+                    }
+                    @include b(mobile-sm) {
+                        left: 78%;
+                    }
+
 
                     &::before {
                         font-size: 0;
@@ -52,6 +68,9 @@
                 bottom: -60px;
                 @include b(tablet) {
                     bottom: -30px;
+                }
+                @include b(mobile) {
+                    text-align: center;
                 }
             }
 
@@ -75,6 +94,9 @@
         @include b(tablet) {
             margin-bottom: 10px;
         }
+        @include b(mobile-sm) {
+           font-size: 30px;
+        }
     }
 
     &__card {
@@ -93,6 +115,9 @@
         &-wrap {
             display: flex;
             justify-content: space-between;
+            @include b(mobile) {
+                flex-direction: column;
+             }
         }
     }
 
